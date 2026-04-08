@@ -1,0 +1,21 @@
+ERROR: FileNotFoundError - No such file or directory: 'config.json'
+ERROR: ValueError - Invalid input format: expected integer, got 'abc'
+ERROR: KeyError - 'username' not found in dictionary
+ERROR: IndexError - List index out of range: index 5, length 3
+ERROR: TypeError - Cannot concatenate str and int
+ERROR: AttributeError - 'NoneType' object has no attribute 'read'
+ERROR: RuntimeError - Database connection timeout after 30 seconds
+ERROR: IOError - Permission denied: cannot write to '/root/data.txt'
+Hello world
+ERROR: SyntaxError - Invalid syntax at line 42
+ERROR: ZeroDivisionError - Division by zero in calculation
+ERROR: ConnectionError - Failed to connect to server at 192.168.1.1:8080
+ERROR: MemoryError - Out of memory: requested 1GB, available 256MB
+ERROR: NameError - Undefined variable 'undefined_var'
+ERROR: AssertionError - Test assertion failed: expected True, got False
+This is a line of dummy text.
+Here is another line of text for testing purposes.
+Adding more content to fill the space.
+Just some random words to make it longer.
+This should help in testing the output.
+End of the dummy text section.
