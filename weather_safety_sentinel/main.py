@@ -4,7 +4,7 @@ from pydantic import ValidationError
 
 def main():
     # Example city
-    city = "Algiers"
+    city = str(input("Enter the city name (e.g., Algiers): "))
     
     # Fetch weather data
     print(f"Fetching weather data for {city}...")
