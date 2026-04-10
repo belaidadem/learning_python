@@ -2,12 +2,12 @@ from weather_service import fetch_weather
 from schema import WeatherReport
 from pydantic import ValidationError
 from database.db import get_db_connection
+from database.db import save_weather_report
 
 
 def main():
     # Example city
     city = str(input("Enter the city name (e.g., Algiers): "))
-    get_db_connection()  # Test database connection
     # Fetch weather data
     print(f"Fetching weather data for {city}...")
     weather_data = fetch_weather(city)
@@ -28,6 +28,9 @@ def main():
         print(f"Elevation: {report.elevation} meters")
         print(f"Temperature: {report.current.temperature_2m}°C")
         print(f"Wind Speed: {report.current.wind_speed_10m} km/h")
+        # Save the report to the database
+        save_weather_report(report)
+        print("Weather report saved to the database.")
 
     except ValidationError as e:
         print("Failed to validate weather data:")
@@ -35,4 +38,5 @@ def main():
 
 
 if __name__ == "__main__":
+    get_db_connection()  # Establish database connection to ensure it's working.
     main()
